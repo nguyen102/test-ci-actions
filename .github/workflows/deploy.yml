@@ -14,4 +14,4 @@ jobs:
           type: now
           target_branch: 'mainline'
         env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          GITHUB_TOKEN: ${{secrets.MERGE_TOKEN}}
