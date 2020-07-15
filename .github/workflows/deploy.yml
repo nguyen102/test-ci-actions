@@ -1,0 +1,17 @@
+name: Merge 
+on:
+  push:
+    branches:
+      - develop
+jobs:
+  merge-to-master:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Merge to mainline branch
+        uses: devmasx/merge-branch@v1.1.0
+        with:
+          type: now
+          target_branch: 'mainline'
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
